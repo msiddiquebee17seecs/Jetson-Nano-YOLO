@@ -3,7 +3,7 @@ This repository contain all files and explanation to run yolo model on Jetson na
 
 -Follwing are the steps to deploy this model on jetson nano.
 
-**#Setting up Jetson Nano**
+**Setting up Jetson Nano**
 >
 - Download SD Card image for your Jetson Nano from https://developer.nvidia.com/embedded/downloads.
 - Format SD card using SD card formatter. You can download it from https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/
@@ -13,14 +13,41 @@ This repository contain all files and explanation to run yolo model on Jetson na
 >
 
 **Initial packages/Libraries**
-- After flashing, first thing to install is the pip3 tool, which will be used to install Python Pakages later on 
-- Use this command in terminal ```sudo apt-get install python3-pip```
-- If you forgot to make swap menory use this command to set it up before installing other libraries.
-```$ sudo fallocate -l 8G /mnt/8GB.swap
-$ sudo mkswap /mnt/8GB.swap
-$sudo swapon /mnt/8GB.swap
+- Clone this repository
+
+```$ cd ${HOME}/project
+$ git clone https://github.com/msiddiquebee17seecs/Jetson-Nano-YOLO.git
+$ cd Jetson-Nano-YOLO
 ```
-- Once the above is working, add the following line```/mnt/8GB.swap  none  swap  sw 0  0``` into ```/etc/fstab``` and reboot the system.
+
+- Assuming this repository has been cloned at "${HOME}/projectJetson-Nano-Yolo", follow these steps:
+- First thing to install is the pip3 tool, which will be used to install Python Packages later on.
+- Use these commands in terminal to install pip3
+- ```sudo apt-get update```
+- ```sudo apt-get install python3-pip```
+
+
+- ***Make swap memory using following commands***
+```free -m
+sudo systemctl disable nvzramconfig
+sudo fallocate -l 8G /mnt/8GB.swap
+sudo chmod 600 /mnt/8GB.swap
+sudo mkswap /mnt/8GB.swap
+sudo vi /etc/fsatb 
+
+Press :i to insert follwing line in /etc/fstab andthen press :wq to save and exit
+
+/mnt/8GB.swap none swap sw 0 0 
+```
+- Reboot system and then verify swap memory using ```free -m```
 - Make sure the swap space gets mounted automatically after reboot.
+
+
+- ***Other packages***
+- We need to setup environment and install few libraries like pycuda etc required for CUDA and GPU accelerations .
+- For installing these libraries run ``` ./initial_cmd.sh```  in terminal  /home/project folder 
+- 
+
+
 
 
