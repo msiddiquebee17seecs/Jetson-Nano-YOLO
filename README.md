@@ -50,7 +50,7 @@ Press :i to insert follwing line in /etc/fstab andthen press :wq to save and exi
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
 ./initial_cmd.sh
-./- install_pycuda.sh
+./install_pycuda.sh
 ```  
 
 - If there is any issue refer to Demo 5 yolov4 on https://github.com/jkjung-avt/tensorrt_demos by @jkjung-avt.
