@@ -1,13 +1,13 @@
 # Jetson-Nano-Yolo
-This repository contain all files and explanation to run yolo model on Jetson nano. YOLO is object detector which is trained on COCO dataset with 80 different classes.
+This repository contains all files and explanation to run yolo model on Jetson nano. YOLO is object detector which is trained on COCO dataset with 80 different classes.
 
--Follwing are the steps to deploy this model on jetson nano.
+-Following are the steps to deploy this model on Jetson Nano.
 
 **Setting up Jetson Nano**
 
 - Download SD Card image for your Jetson Nano from https://developer.nvidia.com/embedded/downloads.
 - Format SD card using SD card formatter. You can download it from https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/
-- Make sure you have Balena etcher installed on your machine to flash SD Card otherwuse download it from https://www.balena.io/etcher/.
+- Make sure you have Balena etcher installed on your machine to flash SD Card otherwise download it from https://www.balena.io/etcher/.
 - Flashing will take few minutes as it will be two step process   1) Flashing      2)Validation
 - Insert card in jetson nano and follow steps.
 
@@ -68,10 +68,10 @@ sudo sh./install_pycuda.sh
 $ cd ${HOME}/project/Jetson-Nano-YOLO/plugins
 $ sudo make
 ```  
-- Download weight and cfg files of your desired yolo version or use ```./download_yolo.sh```.It will download weight and cfg files of different pretrained  yolo versions.
+- Download weight and cfg files of your desired yolo version or use ```./download_yolo.sh```.It will download weight and cfg files of different pretrained yolo versions.
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
-sudo sh../download_yolo.sh
+sudo sh./download_yolo.sh
 ```
 - Now convert YOLO/COCO models to onnx format using ```yolo_to_onnx.py``` script.
 ```
