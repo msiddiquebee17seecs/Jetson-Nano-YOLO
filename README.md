@@ -84,9 +84,26 @@ $ python3 onnx_to_tensorrt.py-m [model]
 - After this stepoptimized trt file will be generated {weightfile name].trt
 - NOTE: ONNX and TRT step could take half an hour Jetson Nano.
 
-- Now we are done and ready to test our model.
-- 
+- Now we are done and ready to test our model with script ``trt_yolo.py```
 
+```
+$ cd ${HOME}/project/Jetson-Nano-YOLO
+$ python3 trt_yolo.py --image cd ${HOME}/project/Jetson-Nano-YOLO/test.jpg
+```
+
+- Moreover the following inputs could be specified:
+
+- --image test_image.jpg: an image file, e.g. jpg or png.
+- --video test_video.mp4: a video file, e.g. mp4 or ts. An optional --video_looping flag could be enabled if needed.
+- --usb 0: USB webcam (/dev/video0).
+- --rtsp rtsp://admin:123456@192.168.1.1/live.sdp: RTSP source, e.g. an IP cam. An optional --rtsp_latency argument could be used to adjust the latency setting in this case.
+- --onboard 0: Jetson onboard camera
+
+**Results**
+
+- I tested two models and have achievd following results on Jetson Nano
+- yolov4-416 ~3FPS
+- yolov4-tiny-416 23FPS
 
 
 
