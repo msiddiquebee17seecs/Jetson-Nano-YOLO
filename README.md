@@ -15,7 +15,8 @@ This repository contain all files and explanation to run yolo model on Jetson na
 **Initial packages/Libraries**
 - Clone this repository
 
-```$ cd ${HOME}/project
+``` 
+$ cd ${HOME}/project
 $ git clone https://github.com/msiddiquebee17seecs/Jetson-Nano-YOLO.git
 $ cd Jetson-Nano-YOLO
 ```
@@ -45,8 +46,12 @@ Press :i to insert follwing line in /etc/fstab andthen press :wq to save and exi
 
 - ***Other packages***
 - We need to setup environment and install few libraries like pycuda etc required for CUDA and GPU accelerations .
-- For installing these libraries run ``` ./initial_cmd.sh```  in terminal  /home/project folder 
-- 
+- For installing these libraries run 
+```
+$ cd ${HOME}/project/Jetson-Nano-YOLO
+./initial_cmd.sh
+```  
+
 
 
 
