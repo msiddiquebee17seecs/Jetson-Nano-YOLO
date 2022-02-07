@@ -4,7 +4,7 @@ This repository contain all files and explanation to run yolo model on Jetson na
 -Follwing are the steps to deploy this model on jetson nano.
 
 **Setting up Jetson Nano**
->
+
 - Download SD Card image for your Jetson Nano from https://developer.nvidia.com/embedded/downloads.
 - Format SD card using SD card formatter. You can download it from https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/
 - Make sure you have Balena etcher installed on your machine to flash SD Card otherwuse download it from https://www.balena.io/etcher/.
@@ -47,7 +47,7 @@ Press :i to insert follwing line in /etc/fstab andthen press :wq to save and exi
 ***Other packages***
 - We need to setup environment and install few libraries like pycuda etc required for CUDA and GPU accelerations .
 - For installing these libraries run
-- 
+
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
 sudo sh./initial_cmd.sh
