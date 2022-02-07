@@ -93,7 +93,7 @@ $ python3 onnx_to_tensorrt.py-m [model]
 
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO
-$ python3 trt_yolo.py --image cd ${HOME}/project/Jetson-Nano-YOLO/test.jpg
+$ python3 trt_yolo.py --image cd ${HOME}/project/Jetson-Nano-YOLO/test.jpg -m [model]
 ```
 
 - Moreover the following inputs could be specified:
