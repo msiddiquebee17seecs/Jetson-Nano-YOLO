@@ -9,7 +9,7 @@ This repository contain all files and explanation to run yolo model on Jetson na
 - Format SD card using SD card formatter. You can download it from https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/
 - Make sure you have Balena etcher installed on your machine to flash SD Card otherwuse download it from https://www.balena.io/etcher/.
 - Flashing will take few minutes as it will be two step process   1) Flashing      2)Validation
-- Insert card in jetson nano and follow steps. Dont forget to make swap memory while setting up jetson nano.
+- Insert card in jetson nano and follow steps.
 
 
 **Initial packages/Libraries**
@@ -50,8 +50,8 @@ Press :i to insert follwing line in /etc/fstab andthen press :wq to save and exi
 - 
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
-./initial_cmd.sh
-./install_pycuda.sh
+sudo sh./initial_cmd.sh
+sudo sh./install_pycuda.sh
 ````  
 
 - If there is any issue refer to Demo 5 yolov4 on https://github.com/jkjung-avt/tensorrt_demos by @jkjung-avt.
@@ -71,7 +71,7 @@ $ sudo make
 - Download weight and cfg files of your desired yolo version or use ```./download_yolo.sh```.It will download weight and cfg files of different pretrained  yolo versions.
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
-./download_yolo.sh
+sudo sh../download_yolo.sh
 ```
 - Now convert YOLO/COCO models to onnx format using ```yolo_to_onnx.py``` script.
 ```
