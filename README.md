@@ -71,7 +71,7 @@ $ sudo make
 - Download weight and cfg files of your desired yolo version or use ```./download_yolo.sh```.It will download weight and cfg files of different pretrained yolo versions.
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
-sudo sh./download_yolo.sh
+sudo sh ./download_yolo.sh
 ```
 - Now convert YOLO/COCO models to onnx format using ```yolo_to_onnx.py``` script.
 ```
