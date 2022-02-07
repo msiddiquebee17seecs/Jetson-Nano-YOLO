@@ -47,11 +47,7 @@ Press :i to insert follwing line in /etc/fstab andthen press :wq to save and exi
 ***Other packages***
 - We need to setup environment and install few libraries like pycuda etc required for CUDA and GPU accelerations .
 - For installing these libraries run 
-```
-$ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
-./initial_cmd.sh
-./install_pycuda.sh
-```  
+`  
 
 - If there is any issue refer to Demo 5 yolov4 on https://github.com/jkjung-avt/tensorrt_demos by @jkjung-avt.
 
@@ -68,6 +64,10 @@ $ cd ${HOME}/project/Jetson-Nano-YOLO/plugins
 $ sudo make
 ```  
 - Download weight and cfg files of your desired yolo version or use ```./download_yolo.sh```.It will download weight and cfg files of different pretrained  yolo versions.
+```
+$ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
+./download_yolo.sh
+```
 - Now convert YOLO/COCO models to onnx format using ```yolo_to_onnx.py``` script.
 ```
 $ cd ${HOME}/project/Jetson-Nano-YOLO/yolo
