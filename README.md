@@ -103,9 +103,10 @@ $ python3 trt_yolo.py --image cd ${HOME}/project/Jetson-Nano-YOLO/test.jpg
 
 - I tested two models and have achievd following results on Jetson Nano
 - yolov4-416 ~3FPS
-- yolov4-tiny-416 23FPS
+- yolov4-tiny-288 ~26FPS
 
 
 
+![0725cc64-0967-4f68-9a63-336a934184a5](https://user-images.githubusercontent.com/82385991/152836059-ec32da15-fdbe-4513-a5c4-6e7eb1742e49.jpg)
 
 
